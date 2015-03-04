@@ -2,7 +2,10 @@ __author__ = 'Sexymax'
 
 from Seed import Seed
 import Utils
+<<<<<<< HEAD
 from nimble import cmds
+=======
+>>>>>>> afb0212cf83f3a6c4b667c98647fc9a96063a6c5
 
 class Planet:
 
@@ -26,15 +29,21 @@ class Planet:
         self.temperature = int(self._planetSeed.fvalue() * self._maxTemp) + self._minTemp
         self._minLoc = int(self._size * 0.5)
         self._distanceFromCenter = distance
+<<<<<<< HEAD
         self._obj = cmds.polySphere(axis=(0,1,0), name="Planet", radius=1, subdivisionsX=20, subdivisionsY=20)
+=======
+>>>>>>> afb0212cf83f3a6c4b667c98647fc9a96063a6c5
 
         for i in range(len(self.planetLoc)):
             self.planetLoc[i] = self._planetSeed.fvalue() * self._maxLoc * Utils.randSign(self._planetSeed.ivalue())
             self._axis[i] = self._planetSeed.fvalue() * Utils.randSign(self._planetSeed.ivalue())
 
+<<<<<<< HEAD
     def addTo(self, parent):
         cmds.parent(self._obj[0],parent)
 
+=======
+>>>>>>> afb0212cf83f3a6c4b667c98647fc9a96063a6c5
     def getSize(self):
         """Returns integer size"""
         return self._size

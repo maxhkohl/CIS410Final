@@ -2,8 +2,11 @@ __author__ = 'Sexymax'
 
 from Seed import Seed
 import Utils
+<<<<<<< HEAD
 from nimble import cmds
 
+=======
+>>>>>>> afb0212cf83f3a6c4b667c98647fc9a96063a6c5
 
 class Sun:
 
@@ -32,11 +35,14 @@ class Sun:
             #self.sunLoc[i] = self._sunSeed.fvalue() * self._maxLoc * Utils.randSign(self._sunSeed.ivalue())
             self._axis[i] = self._sunSeed.fvalue() * Utils.randSign(self._sunSeed.ivalue())
 
+<<<<<<< HEAD
         self._obj = cmds.polySphere(axis=(0,1,0), name="Sun", radius=1, subdivisionsX=20, subdivisionsY=20)
 
     def addTo(self, parent):
         cmds.parent(self._obj[0],parent)
 
+=======
+>>>>>>> afb0212cf83f3a6c4b667c98647fc9a96063a6c5
     def getSize(self):
         """Returns integer size"""
         return self._size

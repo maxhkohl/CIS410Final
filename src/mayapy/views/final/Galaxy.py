@@ -25,6 +25,7 @@ class Galaxy:
         for i in range(len(self._axis)):
             self._axis[i] = self._galaxySeed.fvalue()
 
+<<<<<<< HEAD
        # print("Systems: " + str(self._numSolarSystems) + "\nAxis:" + str(self._axis))
         self._transformNode = cmds.createNode('transform', n = 'Galaxy')
         for s in range(self._numSolarSystems):
@@ -36,6 +37,13 @@ class Galaxy:
         y = self._axis[1] * Utils.degrees
         z = self._axis[2] * Utils.degrees
         cmds.rotate(x,y,z)
+=======
+        print("Systems: " + str(self._numSolarSystems) + "\nAxis:" + str(self._axis))
+
+        for s in range(self._numSolarSystems):
+            distanceFromCenter = self._galaxySeed.fvalue() * self._maxDistance
+            self._solarSystems.append(SolarSystem(self._galaxySeed.ivalue(), distanceFromCenter))
+>>>>>>> afb0212cf83f3a6c4b667c98647fc9a96063a6c5
 
     def draw(self, rot):
         if rot:
@@ -59,6 +67,7 @@ class Galaxy:
             y = 0
             flipped = 0
             for time in range(1,362, 10):
+<<<<<<< HEAD
                 if y == 270:
                     cmds.currentTime(time)
                     cmds.rotate(stuff[i][0], (x,y,z), absolute = False)
@@ -89,5 +98,20 @@ class Galaxy:
                 #else:
                     #y += 10
                 y += 10
+=======
+                cmds.currentTime(time)
+                cmds.setAttr(stuff[i][0]+".rotateAxisY", y, keyable = 1)
+                if flipped == 1:
+                    y -= 10
+                else:
+                    y += 10
+                if y == 261:
+                    y = -91
+                    flipped = 1
+                elif y == 0:
+                    flipped = 1
+                cmds.setKeyframe()
+
+>>>>>>> afb0212cf83f3a6c4b667c98647fc9a96063a6c5
 
 

@@ -46,13 +46,21 @@ class FinalWidget(PyGlassWidget):
         if (self._s == 0 or len(self.seedBox.text()) == 0 ):
             self._s = Seed(0)
         self._galaxy = Galaxy(self._s.ivalue(), 0)
+<<<<<<< HEAD
         #self._galaxy.draw(self.rotation.isChecked())
+=======
+        self._galaxy.draw(self.rotation.isChecked())
+>>>>>>> afb0212cf83f3a6c4b667c98647fc9a96063a6c5
     def _handleAll(self):
         print("Multi-System")
         if (self._s == 0 or len(self.seedBox.text()) == 0 ):
             self._s = Seed(0)
         self._galaxy = Galaxy(self._s.ivalue())
+<<<<<<< HEAD
         #self._galaxy.draw(self.rotation.isChecked())
+=======
+        self._galaxy.draw(self.rotation.isChecked())
+>>>>>>> afb0212cf83f3a6c4b667c98647fc9a96063a6c5
     def _handleDeleteAll(self):
         print("KILL THEM ALL!")
 
