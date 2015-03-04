@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>424</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QPushButton" name="initBtn">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>111</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Initialize Universe</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="makeSeedBtn">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>80</y>
+     <width>91</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Generate Seed</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="rotation">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>10</y>
+     <width>70</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Rotation</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="seedBox">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>50</y>
+     <width>113</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="seedLabel">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>30</y>
+     <width>111</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Current Seed:</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="makeSingleBtn">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>50</y>
+     <width>111</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Create Single System</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="makeAllBtn">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>90</y>
+     <width>111</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Play God</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="nextBtn">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>270</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Next</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="prevBtn">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>270</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Previous</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="deleteSelectedBtn">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>270</y>
+     <width>91</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Delete Selected</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="deleteAllBtn">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>130</y>
+     <width>111</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Delete All</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="addTo">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>240</y>
+     <width>101</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Add to Selection</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="incrementBtn">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>50</y>
+     <width>91</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Increment Seed</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>10</y>
+     <width>41</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Speed:</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="slowBtn">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>10</y>
+     <width>51</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Slow</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="fastBtn">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>30</y>
+     <width>51</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Fast</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="numFrames">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>160</y>
+     <width>71</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>160</y>
+     <width>101</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Number of Frames:</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="frameJump">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>210</y>
+     <width>71</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="frameJumpBtn">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>210</y>
+     <width>111</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Jump to Frame</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="currentFrameLabel">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>190</y>
+     <width>121</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Current Frame:</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
