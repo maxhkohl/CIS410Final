@@ -1,6 +1,5 @@
 from Seed import Seed
 from SolarSystem import SolarSystem
-import nimble
 from nimble import cmds
 import Utils
 
@@ -9,10 +8,11 @@ class Galaxy:
     _galaxySeed = 0
     _solarSystems = []
     _numSolarSystems = 0
-    _maxSolarSystems = 5
+    _maxSolarSystems = 20
     _axis = [0, 0, 0]
     _center = (0, 0, 0)
-    _maxDistance = 100
+    _maxDistance = 1000
+
 
 
     def __init__(self, seedValue, numSystems = 1):
@@ -26,16 +26,26 @@ class Galaxy:
             self._axis[i] = self._galaxySeed.fvalue()
 
 <<<<<<< HEAD
+        self._speed = self._galaxySeed.fvalue()*(Utils.degrees/2) + (Utils.degrees/2)
+
+=======
+<<<<<<< HEAD
+>>>>>>> 7e92e6b5feebc6be4a8a1435d1967e1dffbaf9ae
        # print("Systems: " + str(self._numSolarSystems) + "\nAxis:" + str(self._axis))
-        self._transformNode = cmds.createNode('transform', n = 'Galaxy')
+        self._transformNode = cmds.createNode('transform', n = 'Galaxy')#
         for s in range(self._numSolarSystems):
-            distanceFromCenter = self._galaxySeed.fvalue() * self._maxDistance
-            self._solarSystems.append(SolarSystem(self._galaxySeed.ivalue(), distanceFromCenter))
-            self._solarSystems[s].addTo(self._transformNode)
+            distanceFromCenter = self._galaxySeed.fvalue() * self._maxDistance * Utils.randSign(self._galaxySeed.ivalue())
+            self._solarSystems.append(SolarSystem(self._galaxySeed.ivalue(), distanceFromCenter, s, self._transformNode))
 
         x = self._axis[0] * Utils.degrees
         y = self._axis[1] * Utils.degrees
         z = self._axis[2] * Utils.degrees
+<<<<<<< HEAD
+        cmds.select(self._transformNode)
+        cmds.currentTime(1)
+        cmds.rotate(x,y,z, absolute=True, ws=1)
+        cmds.setKeyframe()
+=======
         cmds.rotate(x,y,z)
 =======
         print("Systems: " + str(self._numSolarSystems) + "\nAxis:" + str(self._axis))
@@ -44,12 +54,29 @@ class Galaxy:
             distanceFromCenter = self._galaxySeed.fvalue() * self._maxDistance
             self._solarSystems.append(SolarSystem(self._galaxySeed.ivalue(), distanceFromCenter))
 >>>>>>> afb0212cf83f3a6c4b667c98647fc9a96063a6c5
+>>>>>>> 7e92e6b5feebc6be4a8a1435d1967e1dffbaf9ae
 
-    def draw(self, rot):
+    def draw(self, rot, frames):
         if rot:
-            print("ROTATION!")
+            time = self._speed
+            cmds.select(self._transformNode)
+            while time < frames:
+                cmds.currentTime(time)
+                cmds.setKeyframe()
+                cmds.currentTime(time)
+                cmds.rotate(0,359,0, r=True, objectSpace=True)
+                cmds.setKeyframe()
+                time += self._speed
+            for s in range(self._numSolarSystems):
+                self._solarSystems[s].draw(frames)
         else:
             print("NO ROTATION!")
+
+    def delete(self):
+        if (self._transformNode):
+            cmds.select(self._transformNode)
+            cmds.delete(self._transformNode)
+    def cat(self):
         x = self._axis[0] * Utils.degrees
         y = self._axis[1] * Utils.degrees
         z = self._axis[2] * Utils.degrees
@@ -65,6 +92,11 @@ class Galaxy:
             cmds.move(self._galaxySeed.fvalue()*10, 0, 0, absolute = 0, objectSpace = 1 )
             cmds.move(0,0,0,  stuff[i][0]+".rotatePivot", stuff[i][0]+".scalePivot",absolute = 1 )
             y = 0
+
+            #EVERY OBJECT GETS THIS ROTATION!
+            #cmds.rotate(0,45,0, relative = True, objectSpace = 1) where 45 is the angle of change between keyframes.
+
+
             flipped = 0
             for time in range(1,362, 10):
 <<<<<<< HEAD

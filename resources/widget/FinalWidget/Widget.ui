@@ -101,45 +101,6 @@
     <string>Play God</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="nextBtn">
-   <property name="geometry">
-    <rect>
-     <x>100</x>
-     <y>270</y>
-     <width>75</width>
-     <height>23</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Next</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="prevBtn">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>270</y>
-     <width>75</width>
-     <height>23</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Previous</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="deleteSelectedBtn">
-   <property name="geometry">
-    <rect>
-     <x>190</x>
-     <y>270</y>
-     <width>91</width>
-     <height>23</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Delete Selected</string>
-   </property>
-  </widget>
   <widget class="QPushButton" name="deleteAllBtn">
    <property name="geometry">
     <rect>
@@ -151,19 +112,6 @@
    </property>
    <property name="text">
     <string>Delete All</string>
-   </property>
-  </widget>
-  <widget class="QCheckBox" name="addTo">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>240</y>
-     <width>101</width>
-     <height>17</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Add to Selection</string>
    </property>
   </widget>
   <widget class="QPushButton" name="incrementBtn">
@@ -275,6 +223,19 @@
    </property>
    <property name="text">
     <string>Current Frame:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="frameAlert">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>160</y>
+     <width>201</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
    </property>
   </widget>
  </widget>
