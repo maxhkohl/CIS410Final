@@ -22,7 +22,6 @@ class FinalWidget(PyGlassWidget):
     def __init__(self, parent, **kwargs):
         """Creates a new instance of Assignment1Widget."""
         super(FinalWidget, self).__init__(parent, **kwargs)
-        self.initBtn.clicked.connect(self._handleInit)
         self.makeSingleBtn.clicked.connect(self._handleSingle)
         self.makeAllBtn.clicked.connect(self._handleAll)
         self.deleteAllBtn.clicked.connect(self._handleDeleteAll)
@@ -36,8 +35,6 @@ class FinalWidget(PyGlassWidget):
 #===================================================================================================
 #                                                                                 H A N D L E R S
 
-    def _handleInit(self):
-        print("CATS!")
     def _handleSingle(self):
         print("Single Solar System")
         if (self._s == 0 or len(self.seedBox.text()) == 0 ):
